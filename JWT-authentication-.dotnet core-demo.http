@@ -1,0 +1,6 @@
+@JWT_authentication_.dotnet_core_demo_HostAddress = http://localhost:5100
+
+GET {{JWT_authentication_.dotnet_core_demo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

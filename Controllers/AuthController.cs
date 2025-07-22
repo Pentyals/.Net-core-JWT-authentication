@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using JWT_authentication_.dotnet_core_demo.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JWT_authentication_.dotnet_core_demo.Controllers
@@ -7,10 +8,10 @@ namespace JWT_authentication_.dotnet_core_demo.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly TokenService _tokenService;
-        private readonly UserService _userService;
+        private readonly ITokenService _tokenService;
+        private readonly IUserService _userService;
 
-        public AuthController(TokenService tokenService, UserService userService)
+        public AuthController(ITokenService tokenService, IUserService userService)
         {
             _tokenService = tokenService;
             _userService = userService;

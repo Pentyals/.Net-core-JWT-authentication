@@ -1,12 +1,13 @@
 ﻿
 using JWT_authentication_.dotnet_core_demo.Models;
+using JWT_authentication_.dotnet_core_demo.Services;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-public class TokenService
+public class TokenService: ITokenService
 {
     //private readonly IConfiguration _config;
     //public TokenService(IConfiguration config) => _config = config;
